@@ -23,3 +23,52 @@ input:focus,select:focus,textarea:focus{border-color:#0e9e94 !important}
 @media (max-width:720px){.wa span{display:none}.wa{padding:14px;right:16px;bottom:16px}}
 @media (max-width:900px){.topmeta{display:none !important}.navwrap{width:100%;order:3}.navlinks{display:flex;flex-wrap:nowrap !important;gap:22px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;padding:2px 0 8px;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{flex:none}.navbtns{margin-left:auto}.navbtns a{padding:10px 16px !important;font-size:14px}}
 @media (max-width:720px){.gal{grid-template-columns:1fr !important}.mk{grid-template-columns:1fr 1fr !important}.gal figure{grid-column:span 1 !important}h1{font-size:46px !important;line-height:1.05 !important}h2{font-size:34px !important;line-height:1.12 !important}.hero-img{height:280px !important}.band-img{height:300px !important}.sec{padding-top:64px !important;padding-bottom:64px !important}.big{font-size:30px !important}}
+
+/* ===== Mobile optimisation ===== */
+@media (max-width: 720px){
+  /* generic rhythm */
+  [id]{scroll-margin-top:72px}
+  div[id][style*="padding: 88px 24px"],div[id][style*="padding: 72px 24px"],div[id][style*="padding: 96px 24px"],.sec{padding-top:48px !important;padding-bottom:48px !important;padding-left:18px !important;padding-right:18px !important}
+  h1{font-size:38px !important;line-height:1.08 !important}
+  h2{font-size:28px !important;line-height:1.15 !important}
+  p{font-size:15px !important;line-height:1.55 !important}
+  .big{font-size:26px !important}
+  /* top bar: hide, keep nav compact */
+  .topmeta{display:none !important}
+  /* hero */
+  .hero-img{height:240px !important}
+  #top .btn{width:100%;text-align:center;box-sizing:border-box}
+  /* kill large fixed heights on banners */
+  .band-img{height:220px !important}
+  img[style*="height: 320px"]{height:220px !important}
+  img[style*="height: 400px"]{height:240px !important}
+  img[style*="height: 260px"]{height:200px !important}
+  img[style*="height: 250px"]{height:200px !important}
+  /* force 2-col grids to 1 col where cards are text-heavy */
+  div[style*="grid-template-columns: repeat(2, minmax(0, 1fr))"]{grid-template-columns:1fr !important}
+  /* keep small stat tiles 2-up */
+  .stats2{grid-template-columns:1fr 1fr !important}
+  /* gallery & markets */
+  .gal{grid-template-columns:1fr !important}.gal figure{grid-column:span 1 !important}
+  .mk{grid-template-columns:1fr 1fr !important}
+  /* flex rows that should stack */
+  div[style*="flex: 1 1 520px"],div[style*="flex: 1 1 480px"],div[style*="flex: 1 1 440px"],div[style*="flex: 1 1 420px"],div[style*="flex: 1 1 400px"],div[style*="flex: 1 1 380px"],div[style*="flex: 1 1 360px"],div[style*="flex: 1 1 340px"],form[style*="flex: 1 1 480px"]{flex-basis:100% !important;max-width:100% !important}
+  /* buttons full width in CTA rows */
+  .btn{display:inline-flex;justify-content:center}
+  /* tables/overflow */
+  .navlinks{gap:18px;font-size:14px}
+  .navbtns a{padding:9px 12px !important;font-size:13px !important}
+  .navbtns a svg{display:none}
+  /* floating whatsapp */
+  .wa{right:14px;bottom:14px;padding:12px}
+  .wa span{display:none}
+  /* capacity tiles 2 up */
+  .cap{grid-template-columns:1fr 1fr !important}
+  /* footer columns */
+  footer div[style*="grid-template-columns"]{grid-template-columns:1fr !important}
+}
+@media (max-width: 420px){
+  h1{font-size:34px !important}
+  .navbtns{width:100%;justify-content:space-between}
+  .navbtns a{flex:1;justify-content:center}
+}
